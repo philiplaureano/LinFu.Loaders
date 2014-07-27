@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>LinFu.Loaders</id>
+        <version>$version$</version>
+        <title>LinFu.Loaders</title>
+        <authors>Philip Laureano</authors>
+        <owners>Philip Laureano</owners>
+        <licenseUrl>https://www.google.com.au/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CBwQFjAA&amp;url=http%3A%2F%2Fopensource.org%2Flicenses%2FMIT&amp;ei=1F7UU8iUL4Le8AWKroKoCQ&amp;usg=AFQjCNHLnploR8MB1GvOk6dHWdThFdiIbg&amp;sig2=ruXfHd4jnP4dImCnJdEQKQ&amp;bvm=bv.71778758,d.dGc</licenseUrl>
+        <projectUrl>https://github.com/philiplaureano/LinFu.Loaders</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A generic plugin framework for loading and configuring any type of object into the CLR at runtime.</description>
+        <summary>A generic plugin framework for loading and configuring any type of object into the CLR at runtime.</summary>
+        <copyright>Copyright © Philip Laureano 2014</copyright>
+    </metadata>
+    <files>
+        <file src="bin\Debug\LinFu.Loaders.dll" target="lib\net45\LinFu.Loaders.dll" />
+    </files>
+</package>
