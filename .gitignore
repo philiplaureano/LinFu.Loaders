@@ -19,6 +19,8 @@ bld/
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
+#Nuget
+*.nupkg
 
 #NUNIT
 *.VisualState.xml
