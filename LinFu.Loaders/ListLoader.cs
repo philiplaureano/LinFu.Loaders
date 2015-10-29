@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace LinFu.Loaders
 {
@@ -19,6 +20,14 @@ namespace LinFu.Loaders
         public IEnumerable<Action<ICollection<T>>> Load(Type input)
         {
             var actionList = new List<Action<ICollection<T>>>();
+
+            var hasDefaultConstructor = input.GetConstructors()
+                .Any(c => c.GetParameters().Length == 0);
+
+            // Ignore types that don't have a default constructor
+            // and types that aren't concrete types
+            if (!hasDefaultConstructor || input.IsAbstract)
+                return new Action<ICollection<T>>[0];
 
             var component = (T) Activator.CreateInstance(input);
             actionList.Add(items => items.Add(component));
