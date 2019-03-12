@@ -3,12 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageVersion>2.0.0</PackageVersion>
+    <PackageVersion>3.1.0</PackageVersion>
     <Title>LinFu.Loaders</Title>
     <Description>A generic plugin framework for loading and configuring any type of object into the CLR at runtime. </Description>
     <Copyright>Philip Laureano, 2019</Copyright>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/philiplaureano/linfu.loaders</RepositoryUrl>
+    <Authors>Philip Laureano</Authors>
   </PropertyGroup>
 
 </Project>
