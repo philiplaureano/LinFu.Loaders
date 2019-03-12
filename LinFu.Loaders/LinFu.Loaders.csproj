@@ -1,74 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3AB13779-4A7F-4304-AE15-9D7237C15BF6}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LinFu.Loaders</RootNamespace>
-    <AssemblyName>LinFu.Loaders</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>2.0.0</PackageVersion>
+    <Title>LinFu.Loaders</Title>
+    <Description>A generic plugin framework for loading and configuring any type of object into the CLR at runtime. </Description>
+    <Copyright>Philip Laureano, 2019</Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/philiplaureano/linfu.loaders</RepositoryUrl>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AssemblyActionLoader.cs" />
-    <Compile Include="AssemblyLoader.cs" />
-    <Compile Include="AssemblyTargetLoader.cs" />
-    <Compile Include="BasePluginLoader.cs" />
-    <Compile Include="CollectionExtensions.cs" />
-    <Compile Include="DefaultDirectoryLister.cs" />
-    <Compile Include="Interfaces\IActionLoader.cs" />
-    <Compile Include="Interfaces\IAssemblyLoader.cs" />
-    <Compile Include="Interfaces\IAssemblyTargetLoader.cs" />
-    <Compile Include="Interfaces\IDirectoryListing.cs" />
-    <Compile Include="Interfaces\IInitialize.cs" />
-    <Compile Include="Interfaces\ILoader.cs" />
-    <Compile Include="Interfaces\ILoaderPlugin.cs" />
-    <Compile Include="Interfaces\ITypeExtractor.cs" />
-    <Compile Include="ListLoader.cs" />
-    <Compile Include="Loader.cs" />
-    <Compile Include="LoaderPluginAttribute.cs" />
-    <Compile Include="PluginLoader.cs" />
-    <Compile Include="Plugins\BaseLoaderPlugin.cs" />
-    <Compile Include="Plugins\BaseTargetLoaderPlugin.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Runtime.cs" />
-    <Compile Include="TypeExtractor.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
