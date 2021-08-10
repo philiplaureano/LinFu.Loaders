@@ -1,15 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageVersion>3.1.0</PackageVersion>
+    <PackageId>Laureano.LinFu.Loaders</PackageId>
     <Title>LinFu.Loaders</Title>
-    <Description>A generic plugin framework for loading and configuring any type of object into the CLR at runtime. </Description>
-    <Copyright>Philip Laureano, 2019</Copyright>
+    <Authors>Philip Laureano</Authors>
+    <Description>A generic plugin framework for loading and configuring any type of object into the CLR at runtime.</Description>
+    <Copyright>Copyright (C) Philip Laureano 2021</Copyright>
+    <PackageProjectUrl>https://github.com/philiplaureano/linfu.loaders</PackageProjectUrl>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/philiplaureano/linfu.loaders</RepositoryUrl>
-    <Authors>Philip Laureano</Authors>
+    <PackageTags>plugins</PackageTags>
+    <Product>Laureano.LinFu.Loaders</Product>
+    <Version>3.1.1</Version>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
   </PropertyGroup>
-
 </Project>
