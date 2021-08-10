@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore LinFu.Loaders/LinFu.Loaders.sln
+      run: dotnet restore LinFu.Loaders.sln
     - name: Build
-      run: dotnet build LinFu.Loaders/LinFu.Loaders.sln --no-restore
+      run: dotnet build LinFu.Loaders.sln --no-restore
     - name: Test
-      run: dotnet test LinFu.Loaders/LinFu.Loaders.sln --no-build --verbosity normal
+      run: dotnet test LinFu.Loaders.sln --no-build --verbosity normal
