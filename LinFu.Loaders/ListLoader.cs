@@ -6,14 +6,14 @@ using System.Linq;
 namespace LinFu.Loaders
 {
     /// <summary>
-    /// Represents an action loader that can load collections from types embedded within a given assembly.
+    ///     Represents an action loader that can load collections from types embedded within a given assembly.
     /// </summary>
     /// <typeparam name="T">The collection item type.</typeparam>
     public class CollectionLoader<T> : IActionLoader<ICollection<T>, Type>
         where T : class
     {
         /// <summary>
-        /// Creates the list of actions that load the target collection into memory.
+        ///     Creates the list of actions that load the target collection into memory.
         /// </summary>
         /// <param name="input">The source type.</param>
         /// <returns>A list of actions that load the target collection into memory.</returns>
@@ -29,14 +29,14 @@ namespace LinFu.Loaders
             if (!hasDefaultConstructor || input.IsAbstract)
                 return new Action<ICollection<T>>[0];
 
-            var component = (T) Activator.CreateInstance(input);
+            var component = (T)Activator.CreateInstance(input);
             actionList.Add(items => items.Add(component));
 
             return actionList;
         }
 
         /// <summary>
-        /// Determines whether or not the given type can be loaded into memory.
+        ///     Determines whether or not the given type can be loaded into memory.
         /// </summary>
         /// <param name="inputType">The source type.</param>
         /// <returns>Returns <c>true</c> if the type can be loaded into memory; otherwise, it will return <c>false</c>.</returns>
@@ -44,7 +44,7 @@ namespace LinFu.Loaders
         {
             try
             {
-                if (!typeof (T).IsAssignableFrom(inputType))
+                if (!typeof(T).IsAssignableFrom(inputType))
                     return false;
 
                 if (!inputType.IsClass)
